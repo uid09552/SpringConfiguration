@@ -5,6 +5,18 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-  <bean id="duke" class="de.maxhoch.Juggler"></bean>
-
+  <bean id="duke1" class="de.maxhoch.Juggler"></bean>
+  <bean id="duke" class="de.maxhoch.Juggler">
+  <constructor-arg value="15"></constructor-arg>
+  </bean>	
+  
+  <bean id="sonnet29" class="de.maxhoch.Sonnet29"></bean>
+  <bean id="poeticDuke" class="de.maxhoch.PoeticJuggler">
+  <constructor-arg value="39"></constructor-arg>
+  <constructor-arg ref="sonnet29"></constructor-arg>
+  </bean>
+  <bean id="kenny" class="de.maxhoch.Instrumentalist">
+  <property name="song" value="Jingle via property"></property>
+  <property name="age" value="37"></property>
+  </bean>
 </beans>

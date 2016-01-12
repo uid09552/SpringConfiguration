@@ -1,6 +1,6 @@
 package de.maxhoch;
 
-public class Instrumentalist {
+public class Instrumentalist implements Performer {
 	public Instrumentalist() {
 		
 	}
@@ -17,12 +17,17 @@ public class Instrumentalist {
 	public void perform() 
 	{
 		System.out.println("Playing " + song);
+		//instrument.play();
 	}
 	public String screamSong(){
 		return song;
 	}
 	
-	@SuppressWarnings("unused")
+	private int age;
+	public void setAge(int age)
+	{
+		this.age=age;
+	}
 	private Instrument instrument;
 	
 	public void setInstrument(Instrument instrument)
