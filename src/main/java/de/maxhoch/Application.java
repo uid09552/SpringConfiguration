@@ -15,11 +15,17 @@ public class Application {
 		//performer.perform();
 		Performer performer2=(Performer) context.getBean("duke1");
 		performer2.perform();
-	System.out.println("Application started");
-	Performer performer3=(Performer) context.getBean("poeticDuke");
-	performer3.perform();
-	Performer performer4=(Performer) context.getBean("kenny");
-	performer4.perform();
+		System.out.println("Application started");
+		Performer performer3=(Performer) context.getBean("poeticDuke");
+		performer3.perform();
+		Performer performer4=(Performer) context.getBean("kenny");
+		performer4.perform();
+	
+	
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("annotation-bean.xml");
+		Performer duke15=(Performer) ctx.getBean("duke15");
+		duke15.perform();
+	
 	}
 
 }
