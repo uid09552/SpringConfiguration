@@ -34,6 +34,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
     compile 'org.springframework:spring-context:3.0.2.RELEASE'
     compile 'cglib:cglib-nodep:2.2'
+    compile 'org.slf4j:jcl-over-slf4j:1.7.12'
     
 }
 

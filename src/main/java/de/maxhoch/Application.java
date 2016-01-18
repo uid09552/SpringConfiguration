@@ -2,12 +2,16 @@ package de.maxhoch;
 
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 public class Application {
 
 	public static void main(String[] args) {
+		
+				
 		// TODO Auto-generated method stub
 		ApplicationContext context =
 			    new ClassPathXmlApplicationContext("beans.xml");
@@ -20,7 +24,9 @@ public class Application {
 		performer3.perform();
 		Performer performer4=(Performer) context.getBean("kenny");
 		performer4.perform();
-	
+		
+		
+		
 	
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("annotation-bean.xml");
 		Performer duke15=(Performer) ctx.getBean("duke15");
