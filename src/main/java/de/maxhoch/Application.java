@@ -28,9 +28,12 @@ public class Application {
 		
 		
 	
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("annotation-bean.xml");
-		Performer duke15=(Performer) ctx.getBean("duke15");
+		//ApplicationContext ctx = new ClassPathXmlApplicationContext("annotation-bean.xml");
+		Performer duke15=(Performer) context.getBean("duke15");
 		duke15.perform();
+		
+		Performer singer = (Performer) context.getBean("singer");
+		singer.perform();
 	
 	}
 

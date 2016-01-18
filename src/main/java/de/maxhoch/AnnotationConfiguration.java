@@ -20,4 +20,13 @@ public class AnnotationConfiguration {
 	{
 		return LoggerFactory.getLogger(Application.class);
 	}
+	
+	@Bean
+	@Qualifier("othersong")
+	public OtherSong othersong()
+	{
+		OtherSong song = new OtherSong();
+		song.setOthersong("I sing other song");
+		return song;
+	}
 }
